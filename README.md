@@ -1,4 +1,4 @@
-# KaufpreisManager Installation Guide
+# Immo Kaufpreisrechner Installation Guide
 
 Follow these steps to get your application running using Docker.
 
@@ -34,7 +34,7 @@ Open your terminal in the `/my-app` folder. Run the build command, passing your 
 
 ```bash
 # Replace "YOUR_ACTUAL_API_KEY_HERE" with your key from Google
-docker build --build-arg VITE_GOOGLE_API_KEY=YOUR_ACTUAL_API_KEY_HERE -t kaufpreis-manager .
+docker build --build-arg VITE_GOOGLE_API_KEY=YOUR_ACTUAL_API_KEY_HERE -t immo-kpa .
 ```
 
 *Note: If you change the key later, you must run this build command again.* **Security Warning:** Passing secrets via `--build-arg` persists them in the Docker image history. For a strictly local setup this is acceptable, but avoid sharing the built image publicly.
@@ -44,7 +44,7 @@ docker build --build-arg VITE_GOOGLE_API_KEY=YOUR_ACTUAL_API_KEY_HERE -t kaufpre
 Start the app:
 
 ```bash
-docker run -p 8080:80 kaufpreis-manager
+docker run -p 8080:80 immo-kpa
 ```
 
 ## 5. Access the App

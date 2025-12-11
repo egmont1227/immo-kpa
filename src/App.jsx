@@ -480,7 +480,7 @@ export default function App() {
             </div>
             <div>
               <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600">
-                Kaufpreis<span className="text-indigo-600">Manager</span>
+                Kaufpreis<span className="text-indigo-600">Aufteilung</span>
               </h1>
               <p className="text-xs text-slate-500 font-medium">Investoren Tool & Steuer-Optimierung</p>
             </div>
