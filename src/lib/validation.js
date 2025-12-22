@@ -17,7 +17,7 @@ export const validateBaujahr = (value) => {
 
 export const validateKaufjahr = (value, baujahr) => {
     if (!value) return "Kaufjahr erforderlich";
-    if (value < 1800 || value > 2025) return "Kaufjahr muss zwischen 1800 und 2025 liegen";
+    if (value < 1800 || value > 2026) return "Kaufjahr muss zwischen 1800 und 2025 liegen";
     if (baujahr && value < baujahr) return "Kaufjahr kann nicht vor Baujahr liegen";
     return null;
 };
