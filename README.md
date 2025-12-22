@@ -52,5 +52,3 @@ docker run -p 8080:80 immo-kpa
 Open your web browser and go to:
 
 **http://localhost:8080**
-
-The AI Analysis button will now function correctly.
