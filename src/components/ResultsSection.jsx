@@ -2,9 +2,10 @@ import React from 'react';
 import { Building, MapPin, TrendingUp, Info, Sparkles, FileText, Layers } from 'lucide-react';
 import { GlassCard } from './ui/GlassCard';
 import { GradientButton } from './ui/GradientButton';
+import { AICallToAction } from './AICallToAction';
 import { fmtEuro, fmtPercent, fmtDec } from '../lib/calculations';
 
-export const ResultsSection = ({ inputs, results }) => {
+export const ResultsSection = ({ inputs, results, onAIAnalyze, isAILoading }) => {
     if (!results) {
         return (
             <div className="space-y-6">
@@ -322,10 +323,16 @@ export const ResultsSection = ({ inputs, results }) => {
 
             </GlassCard>
 
-            <div className="flex justify-end gap-4">
+            <div className="flex flex-col gap-4">
                 <GradientButton variant="secondary" onClick={() => window.print()} icon={FileText}>
                     PDF Export
                 </GradientButton>
+
+                {/* AI Analysis */}
+                <AICallToAction
+                    onAnalyze={onAIAnalyze}
+                    isLoading={isAILoading}
+                />
             </div>
         </div>
     );

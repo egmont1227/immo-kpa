@@ -6,8 +6,8 @@ import { calculateResults } from '../lib/calculations';
 /**
  * Custom hook for calculator state and logic
  */
-export const useCalculator = () => {
-    const [inputs, setInputs] = useState(DEFAULT_INPUTS);
+export const useCalculator = (initialInputs = DEFAULT_INPUTS) => {
+    const [inputs, setInputs] = useState(initialInputs);
     const [validationErrors, setValidationErrors] = useState(null);
 
     // Validate inputs whenever they change
@@ -32,10 +32,17 @@ export const useCalculator = () => {
         setInputs(prev => ({ ...prev, ...updates }));
     };
 
+    // Load new inputs (for property switching)
+    const loadInputs = (newInputs) => {
+        setInputs(newInputs);
+    };
+
     return {
         inputs,
+        setInputs,
         updateInput,
         updateInputs,
+        loadInputs,
         results,
         errors,
         hasErrors: errors !== null
